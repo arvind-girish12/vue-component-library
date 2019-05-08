@@ -1,5 +1,7 @@
 <template>
-<div class="component-container">    This is component container</div>
+<div class="component-container">
+  <slot name="component"></slot>
+</div>
 </template>
 
 <style lang="less" scoped>
