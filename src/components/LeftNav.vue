@@ -6,8 +6,8 @@
      <input type="text" placeholder="Search component"></input>
     </div>
     <div class="component-list">
-        <div class="component-name" v-for="(component) in componentList">
-           <a href="javascript:void[0]" @click="handleComponentClick(component)">{{component}}</a>
+        <div class="component-name">
+           <a href="javascript:void[0]" @click="handleComponentClick()">Hi</a>
         </div>
     </div>
 </div>
@@ -20,14 +20,13 @@ export default {
   },
   data() {
     return{
-          componentList: this.$store.state.componentList,
     }
   },
   computed: {
   },
   methods: {
-    handleComponentClick(component) {
-       this.$store.commit('SET_CURRENT_COMPONENT', component);
+    handleComponentClick() {
+    console.log('hi')
     },
   },
 }

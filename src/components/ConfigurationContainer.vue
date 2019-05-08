@@ -1,7 +1,6 @@
 <template>
 <div class="configuration-container"> 
-   <div class="config-component" v-for="(config) in configKeys">
-   <component :is="checkComponent(componentConfig[config])"></component>
+   YYYYYY
    </div>
 </div>
 </template>
@@ -22,43 +21,11 @@ export default {
     }
   },
   computed: {
-   currentComponent(){
-     return this.$store.getters.CURRENT_COMPONENT;
-   }
   },
   watch:{
-    currentComponent(value) {
-        this.handleComponentConfiguration(this.currentComponent);
-    this.handleConfigTypes();
-    }
-},
+  },
   methods: {
-    handleComponentConfiguration(currentComponent) {
-      switch(currentComponent) {
-        case 'Checkbox': {
-          componentConfig = this.$store.getters.CHECKBOX
-          break;
-        }
-        case 'Accordion':{
-          componentConfig = this.$store.getters.ACCORDION
-          break;
-        }
-        case 'Modal':{
-          componentConfig = this.$store.getters.MODAL
-          break;
-        }
-      }
-    },
-    handleConfigTypes(){
-      this.configKeys = Object.keys(componentConfig);
-    },
-    checkComponent(config) {
-      if(typeof(config) === 'string' || typeof(config) === 'number'){
-        return 'Input'
-      } else if(typeof(config) === 'boolean'){
-        return 'Checkbox'
-      }
-    },
+    
   },
   mounted() {
    
