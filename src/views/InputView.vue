@@ -6,6 +6,9 @@
          </template>
          </ComponentContainer>
          <ConfigurationContainer >
+            <template slot="logs">
+           Input logs
+           </template>
          <template slot="documentation">
            Input documentation
            </template>

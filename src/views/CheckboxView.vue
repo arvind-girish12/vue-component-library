@@ -6,6 +6,9 @@
          </template>
          </ComponentContainer>
          <ConfigurationContainer >
+            <template slot="logs">
+           Checkbox logs
+           </template>
          <template slot="documentation">
            Checkbox documentation
            </template>

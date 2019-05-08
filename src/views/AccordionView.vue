@@ -6,6 +6,9 @@
          </template>
          </ComponentContainer>
          <ConfigurationContainer >
+           <template slot="logs">
+           accordion logs
+           </template>
          <template slot="documentation">
            accordion documentation
            </template>

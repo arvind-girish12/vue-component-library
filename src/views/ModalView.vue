@@ -6,6 +6,9 @@
          </template>
          </ComponentContainer>
          <ConfigurationContainer >
+            <template slot="logs">
+           Modal logs
+           </template>
          <template slot="documentation">
            Modal documentation
            </template>
