@@ -1,8 +1,36 @@
 <template>
 <div class="configuration-container"> 
-   YYYYYY
+   <div class="tab-container">
+    <ul id="tabs" class="nav nav-tabs" role="tablist" aria-orientation="horizontal">
+      <li class="tab-item active">
+        <a id="tab-logs" href="#logs" class="nav-link active" data-toggle="tab" role="tab" tabindex="0">Logs</a>
+      </li>
+      <li class="tab-item active">
+        <a id="tab-documentation" href="#documentation" class="nav-link" data-toggle="tab" role="tab" tabindex="0">Documentation</a>
+      </li>
+      <li class="tab-item">
+        <a id="tab-triggers" href="#triggers" class="nav-link" data-toggle="tab" role="tab" tabindex="0">Triggers</a>
+      </li>
+      <li class="tab-item">
+        <a id="tab-code" href="#code" class="nav-link" data-toggle="tab" role="tab" tabindex="0">Code</a>
+      </li>
+    </ul>
+  </div>
+  <div id="content" class="tab-content" role="tablist">
+    <div id="logs" class="card tab-pane in active" role="tabpanel">
+    <slot name="logs"></slot>
+    </div>
+    <div id="documentation" class="card tab-pane fade" role="tabpanel">
+      <slot name="documentation"></slot>
+    </div>
+    <div id="triggers" class="card tab-pane fade" role="tabpanel">
+     <slot name="triggers"></slot>
+    </div>
+    <div id="code" class="card tab-pane fade" role="tabpanel">
+    <slot name="code"></slot>
+    </div>
+  </div>
    </div>
-</div>
 </template>
 
 <script>

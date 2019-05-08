@@ -3,11 +3,11 @@
     <div class="title">Component List</div>
     <div class="search-bar">
      <font-awesome-icon icon="search" class="fa-lg search-icon" />
-     <input type="text" placeholder="Search component"></input>
+     <input type="text" placeholder="Search component">
     </div>
     <div class="component-list">
-        <div class="component-name">
-           <a href="javascript:void[0]" @click="handleComponentClick()">Hi</a>
+        <div class="component-name" v-for="(component,index) in componentList">
+           <a href="javascript:void[0]" @click="handleComponentClick(component)">{{component.name}}</a>
         </div>
     </div>
 </div>
@@ -20,13 +20,32 @@ export default {
   },
   data() {
     return{
+      componentList: [
+        {
+          name : 'Accordion',
+          route: '/accordion'
+        },
+        {
+          name : 'Checkbox',
+          route: '/checkbox'
+        },
+        {
+          name : 'Input',
+          route: '/input'
+        },
+        {
+          name : 'Modal',
+          route: '/modal'
+        },
+      ],
     }
   },
   computed: {
   },
   methods: {
-    handleComponentClick() {
-    console.log('hi')
+    handleComponentClick(component) {
+    console.log(component);
+    this.$router.push(component.route);
     },
   },
 }

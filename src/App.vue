@@ -1,8 +1,30 @@
 <template>
   <div id="app">
-    <router-view/>
+   <Header />
+    <div class="content">
+      <div class="left-section">
+           <LeftNav />
+      </div>
+      <div class="right-section">   
+           <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
+
+<script>
+import LeftNav from './components/LeftNav.vue';
+import Header from './components/Header.vue';
+
+export default {
+  name: 'App',
+  components: {
+    LeftNav,
+    Header
+  },
+};
+</script>
+
 
 <style lang="less">
 #app {
@@ -24,5 +46,18 @@ body {
       color: #42b983;
     }
   }
+}
+.content {
+  display: flex;
+  height: 100vh;
+}
+.left-section {
+  min-width: 200px;
+  flex: 1;
+  background: #a9c6de;
+}
+.right-section {
+  flex: 6;
+  background: #a9c6de;
 }
 </style>
